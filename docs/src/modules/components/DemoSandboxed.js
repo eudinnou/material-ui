@@ -180,10 +180,12 @@ function DemoSandboxed(props) {
         </Sandbox>
       ) : (
         <StylesProvider jss={jss}>
-          <Sandbox {...sandboxProps}>
-            {/* WARNING: `<Component />` needs to be a child of `Sandbox` since certain implementations rely on `cloneElement` */}
-            <Component />
-          </Sandbox>
+          <ThemeProvider theme={(outerTheme) => getTheme(outerTheme)}>
+            <Sandbox {...sandboxProps}>
+              {/* WARNING: `<Component />` needs to be a child of `Sandbox` since certain implementations rely on `cloneElement` */}
+              <Component />
+            </Sandbox>
+          </ThemeProvider>
         </StylesProvider>
       )}
     </DemoErrorBoundary>
