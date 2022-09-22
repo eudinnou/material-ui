@@ -4,7 +4,7 @@ const { prepareMarkdown } = require('./parseMarkdown');
 
 const notEnglishMarkdownRegExp = /-([a-z]{2})\.md$/;
 // TODO: pass as argument
-const LANGUAGES_IN_PROGRESS = ['en', 'zh', 'ru', 'pt', 'es', 'fr', 'de', 'ja'];
+const LANGUAGES_IN_PROGRESS = ['en'];
 
 /**
  * @param {string} string
